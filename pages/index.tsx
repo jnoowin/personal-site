@@ -2,8 +2,19 @@ import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import Welcome from "./welcome";
+import About from "./about";
+import { getIcons } from "../lib/icon";
 
-export default function Home() {
+export async function getStaticProps() {
+  const icons = getIcons();
+  return {
+    props: {
+      icons,
+    },
+  };
+}
+
+export default function Home({ icons }) {
   return (
     <>
       <Head>
@@ -16,7 +27,7 @@ export default function Home() {
 
       <Layout>
         <Welcome />
-        <h1>hello</h1>
+        <About icons={icons} />
       </Layout>
     </>
   );

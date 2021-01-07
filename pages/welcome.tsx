@@ -9,7 +9,11 @@ import utilStyles from "../styles/util.module.css";
 export default function Welcome() {
   return (
     <>
-      <section className={`${layoutStyles.container} ${utilStyles.welcome}`}>
+      <div
+        className={`${layoutStyles.container} ${utilStyles.welcome}`}
+        style={{ height: "100vh" }}
+        id="home"
+      >
         <h3>Hi! My name is</h3>
         <h1>Jared Nguyen.</h1>
         <p>
@@ -41,7 +45,7 @@ export default function Welcome() {
             </a>
           </IconContext.Provider>
         </section>
-      </section>
+      </div>
       <Background />
     </>
   );

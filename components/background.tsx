@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Particles from "react-particles-js";
+
 export default function Background() {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
   return (
     <Particles
       style={{
@@ -15,7 +22,7 @@ export default function Background() {
       params={{
         particles: {
           number: {
-            value: 200,
+            value: width / 8,
           },
           color: {
             value: "#fff",
