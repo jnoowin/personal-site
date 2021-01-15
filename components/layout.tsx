@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import layoutStyles from "../styles/layout.module.css";
+import pageStyles from "../styles/page.module.css";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
       <div>
         {React.Children.map(children, (component, index) =>
           index == 0 ? null : (
-            <div key={index} className={layoutStyles.container}>
+            <div key={index} className={pageStyles.container}>
               {component}
             </div>
           )

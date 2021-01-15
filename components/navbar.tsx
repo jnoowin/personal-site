@@ -1,11 +1,24 @@
-import React, { useEffect, useState } from "react";
-import utilStyles from "../styles/util.module.css";
+import React, { useEffect, useState, useRef } from "react";
+import navbarStyles from "../styles/navbar.module.css";
 
 export default function Navbar() {
-  const [scroll, setScroll] = useState(false);
+  const navRef = useRef(null);
+  let prevScroll;
 
   const handleScroll = () => {
-    setScroll(window.scrollY >= window.innerHeight);
+    if (window.scrollY > window.innerHeight) {
+      navRef.current.style.position = "fixed";
+      navRef.current.style.transition = "transform 0.3s ease";
+      navRef.current.style.top = 0;
+      window.scrollY >= prevScroll
+        ? (navRef.current.style.transform = "translateY(-3rem)")
+        : (navRef.current.style.transform = "translateY(0px)");
+    } else {
+      navRef.current.style.position = "absolute";
+      navRef.current.style.transition = "none";
+      navRef.current.style.top = "inherit";
+    }
+    prevScroll = window.scrollY;
   };
 
   useEffect(() => {
@@ -14,15 +27,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={utilStyles.navbar}
-      style={{
-        top: scroll ? "0" : "100vh",
-        position: scroll ? "fixed" : "absolute",
-      }}
-    >
+    <nav ref={navRef} className={navbarStyles.navbar}>
       <ul>
-        <li style={{ flex: 1 }}>
+        <li className={navbarStyles.title}>
           <img src="/static/logo.svg" alt="logo"></img>
         </li>
         <li>

@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tech from "../components/tech";
-import utilStyles from "../styles/util.module.css";
-import { useMediaQuery } from "react-responsive";
+import pageStyles from "../styles/page.module.css";
 
 export default function About({ icons }) {
-  const matches = useMediaQuery({ query: "(max-width: 1000px)" });
-
   return (
-    <div className={utilStyles.about} id="about">
+    <div className={`${pageStyles.about}`} id="about">
       <h1>ABOUT</h1>
-      <section style={{ flexDirection: matches ? "column-reverse" : "row" }}>
+      <section>
         <div>
           <p>Hey there! I'm Jared. </p>
           <p>

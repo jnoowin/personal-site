@@ -1,9 +1,9 @@
 import React from "react";
-import utilStyles from "../styles/util.module.css";
+import techStyles from "../styles/tech.module.css";
 
 export default function Tech({ icons }) {
   return (
-    <div className={utilStyles.tech}>
+    <div className={techStyles.tech}>
       {icons.map((icon, index) => (
         <img key={index} src={`/icons/${icon}`} alt={icon} />
       ))}

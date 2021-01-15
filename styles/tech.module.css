@@ -1,0 +1,11 @@
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tech img {
+  height: 4rem;
+  /* max-height: 5rem; */
+  /* max-width: 5rem; */
+}

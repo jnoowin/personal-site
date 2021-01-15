@@ -3,14 +3,13 @@ import { IconContext } from "react-icons";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { IoDocumentText } from "react-icons/io5";
 import Background from "../components/background";
-import layoutStyles from "../styles/layout.module.css";
-import utilStyles from "../styles/util.module.css";
+import pageStyles from "../styles/page.module.css";
 
 export default function Welcome() {
   return (
     <>
       <div
-        className={`${layoutStyles.container} ${utilStyles.welcome}`}
+        className={`${pageStyles.container} ${pageStyles.welcome}`}
         style={{ height: "100vh" }}
         id="home"
       >
