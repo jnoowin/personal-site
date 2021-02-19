@@ -2,7 +2,7 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { IoDocumentText } from "react-icons/io5";
-import Background from "../components/background";
+import Background from "./background";
 import pageStyles from "../styles/page.module.css";
 
 export default function Welcome() {
@@ -39,7 +39,7 @@ export default function Welcome() {
             <a href="mailto:jtn2km@virginia.edu" target="_blank">
               <GrMail />
             </a>
-            <a href="" target="_blank">
+            <a href="/static/Resume - Jared Nguyen.pdf" target="_blank">
               <IoDocumentText />
             </a>
           </IconContext.Provider>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Tech from "../components/tech";
 import pageStyles from "../styles/page.module.css";
 

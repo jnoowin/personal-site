@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import navbarStyles from "../styles/navbar.module.css";
 
 export default function Navbar() {
@@ -37,6 +37,9 @@ export default function Navbar() {
         </li>
         <li>
           <a href="#about">ABOUT</a>
+        </li>
+        <li>
+          <a href="/static/Resume - Jared Nguyen.pdf" target="_blank">RESUME</a>
         </li>
       </ul>
     </nav>
